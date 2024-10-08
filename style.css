@@ -1,0 +1,61 @@
+/*
+Theme Name: Eva Theme V1
+Author: Eva
+Author URI: https://evasquare.com/
+*/
+
+@import "./assets/css/normalize.css";
+@import "./assets/css/color-palette.css";
+@import "./assets/css/other-variables.css";
+
+body {
+    color: var(--text-color);
+    background: var(--background-color);
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.no-decoration,
+.no-decoration:link,
+.no-decoration:visited {
+    text-decoration: none;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.hover-transition {
+    transition: transform 0.16s ease-out;
+    transform: none;
+}
+.hover-transition:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.attachment-post-thumbnail,
+.no-image,
+img {
+    border-radius: 15px;
+}
+
+/*
+  Plugin: code block pro
+*/
+.wp-block-image,
+.wp-post-image,
+iframe {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+}
+
+.wp-block-code {
+    position: initial;
+    overflow-x: auto;
+}

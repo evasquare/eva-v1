@@ -1,0 +1,23 @@
+body {
+    --text-color: black;
+    --background-color: white;
+
+    --scheme-color: #4640cd;
+    --link-color: #5d57c5;
+
+    --article-date-color: #797979;
+
+    --navigation-selected: #c6c6c6;
+
+    @media (prefers-color-scheme: dark) {
+        --background-color: rgb(14, 14, 14);
+        --text-color: white;
+
+        --scheme-color: #4640cd;
+        --link-color: #a7a2ff;
+
+        --article-date-color: #c5c5c5;
+
+        --navigation-selected: #646464;
+    }
+}

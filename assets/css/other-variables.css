@@ -1,0 +1,5 @@
+:root {
+    --desktop-view-width: 92%;
+    --desktop-view-max-width: 1000px;
+    --content-desktop-view-max-width: 650px;
+}
