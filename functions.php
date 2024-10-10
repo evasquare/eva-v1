@@ -1,23 +1,23 @@
 <?php
-function evav1_supports()
+function eva_v1_supports()
 {
     add_theme_support('post-thumbnails');
 }
 
-add_action('after_setup_theme', 'evav1_supports');
+add_action('after_setup_theme', 'eva_v1_supports');
 
-function evav1_setup()
+function eva_v1_setup()
 {
-    wp_enqueue_style('evav1_main_styles', get_theme_file_uri('/style.css'));
+    wp_enqueue_style('eva_v1_main_styles', get_theme_file_uri('/style.css'));
 }
 
-add_action('wp_enqueue_scripts', 'evav1_setup');
+add_action('wp_enqueue_scripts', 'eva_v1_setup');
 
-if (! function_exists('evav1_numeric_post_navigation')) {
+if (! function_exists('eva_v1_numeric_post_navigation')) {
     /** Original Code:
      * https://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
      * */
-    function evav1_numeric_post_navigation()
+    function eva_v1_numeric_post_navigation()
     {
         if (is_singular()) {
             return;
@@ -105,11 +105,11 @@ if (! function_exists('evav1_numeric_post_navigation')) {
         echo $output;
     }
 }
-if (! function_exists('evav1_reverse_post_navigation')) {
+if (! function_exists('eva_v1_reverse_post_navigation')) {
     /** Original Code:
      * https://gist.github.com/jaredchu/3e3bcb866240d1d32a3b4ae55905b135#file-the_reverse_post_navigation
      * */
-    function evav1_reverse_post_navigation($args = array())
+    function eva_v1_reverse_post_navigation($args = array())
     {
         $args = wp_parse_args($args, array(
             'prev_text'          => '%title',

@@ -91,7 +91,7 @@
                     <p>No post found! :(</p>
                 <?php endif; ?>
             </div>
-            <?php evav1_numeric_post_navigation($paged) ?>
+            <?php eva_v1_numeric_post_navigation($paged) ?>
         </div>
     </div>
     <?php get_footer(); ?>

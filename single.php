@@ -81,7 +81,7 @@
             ?>
 
             <?php
-            evav1_reverse_post_navigation(
+            eva_v1_reverse_post_navigation(
                 array(
                     'next_text' =>
                     '<span class="post-navigation">'
