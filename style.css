@@ -7,6 +7,7 @@ Author URI: https://evasquare.com/
 @import "./assets/css/normalize.css";
 @import "./assets/css/color-palette.css";
 @import "./assets/css/other-variables.css";
+@import "./assets/css/wp-block.css";
 
 body {
     color: var(--text-color);
@@ -31,31 +32,4 @@ a {
 }
 .hover-transition:hover {
     transform: scale(1.1, 1.1);
-}
-
-.attachment-post-thumbnail,
-.no-image,
-img {
-    border-radius: 15px;
-}
-
-/*
-  Plugin: code block pro
-*/
-.wp-block-image,
-.wp-post-image,
-iframe {
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-iframe {
-    aspect-ratio: 16/9;
-    width: 100%;
-    height: auto;
-}
-
-.wp-block-code {
-    position: initial;
-    overflow-x: auto;
 }

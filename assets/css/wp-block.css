@@ -1,0 +1,34 @@
+.wp-block-code {
+    position: initial;
+    overflow-x: auto;
+}
+
+.wp-block-quote {
+    margin-right: 0;
+    margin-left: 0;
+}
+.wp-block-quote > p {
+    margin: 0 40px;
+}
+
+.attachment-post-thumbnail,
+.no-image,
+img {
+    border-radius: 15px;
+}
+
+iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+}
+
+/*
+  Plugin: code block pro
+*/
+.wp-block-image,
+.wp-post-image,
+iframe {
+    border-radius: 15px;
+    overflow: hidden;
+}
