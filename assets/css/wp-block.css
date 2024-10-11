@@ -3,14 +3,6 @@
     overflow-x: auto;
 }
 
-.wp-block-quote {
-    margin-right: 0;
-    margin-left: 0;
-}
-.wp-block-quote > p {
-    margin: 0 40px;
-}
-
 .attachment-post-thumbnail,
 .no-image,
 img {
