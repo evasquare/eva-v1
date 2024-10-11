@@ -9,6 +9,8 @@
             </a>
         </div>
 
+        <?php $user_locale = get_user_locale(); ?>
+
         <div class="right">
             <div class="black-icons">
                 <a class="hover-transition" href="https://github.com/evasquare">
@@ -25,21 +27,71 @@
                 </a>
             </div>
             <div class="white-icons">
-                <a class="hover-transition" href="https://github.com/evasquare">
+                <a href="https://github.com/evasquare">
                     <img
-                        class="icon"
+                        class="icon hover-transition"
                         src="<?php echo get_theme_file_uri(); ?>/assets/images/github-white.svg"
                         alt="Github" />
                 </a>
-                <a class="hover-transition" href="mailto:eva@evasquare.com">
+                <a href="mailto:eva@evasquare.com">
                     <img
-                        class="icon"
+                        class="icon hover-transition"
                         src="<?php echo get_theme_file_uri(); ?>/assets/images/email-white.svg"
                         alt="Send Email" />
                 </a>
+                <div class="language-switch">
+                    <?php if ($user_locale != "en_US"): ?>
+                        <div class="black-icons">
+                            <a class="lang-button " href="/">
+                                <img
+                                    class="icon hover-transition"
+                                    src="<?php echo get_theme_file_uri(); ?>/assets/images/english-black.svg"
+                                    alt="English" />
+                            </a>
+                        </div>
+                        <div class="white-icons">
+                            <a class="lang-button " href="/">
+                                <img
+                                    class="icon hover-transition"
+                                    src="<?php echo get_theme_file_uri(); ?>/assets/images/english-white.svg"
+                                    alt="English" />
+                            </a>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($user_locale != "ko_KR"): ?>
+                        <div class="black-icons">
+                            <a class="lang-button" href="/ko">
+                                <img
+                                    class="icon hover-transition"
+                                    src="<?php echo get_theme_file_uri(); ?>/assets/images/korean-black.svg"
+                                    alt="Korean" />
+                            </a>
+                        </div>
+                        <div class="white-icons">
+                            <a class="lang-button" href="/ko">
+                                <img
+                                    class="icon hover-transition"
+                                    src="<?php echo get_theme_file_uri(); ?>/assets/images/korean-white.svg"
+                                    alt="Korean" />
+                            </a>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
 
-            <a class="hover-transition no-decoration" href="<?php echo get_permalink(get_page_by_path('now')) ?>">
+
+
+
+            <?php
+            if ($user_locale == "en_US") {
+                $now_url = get_permalink(get_page_by_path('now'));
+            } else if ($user_locale == "ko_KR") {
+                $now_url = get_permalink(get_page_by_path('now-ko'));
+            } else {
+                $now_url = get_permalink(get_page_by_path('now'));
+            }
+            ?>
+            <a class="hover-transition no-decoration" href="<?php echo $now_url ?>">
                 <div class="big-button">
                     Now
                 </div>
@@ -114,5 +166,13 @@
     .black-icons {
         height: 40px;
         column-gap: 8px;
+    }
+
+    .lang-button {
+        height: 40px;
+    }
+
+    .lang-button>img {
+        height: 40px;
     }
 </style>
