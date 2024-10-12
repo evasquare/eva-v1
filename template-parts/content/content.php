@@ -8,12 +8,6 @@
         height: auto;
     }
 
-    .wp-block-kevinbatdorf-code-block-pro {
-        border-radius: 15px;
-        overflow: hidden;
-        margin: 10px 0px;
-    }
-
     .comment-form-comment {
         display: flex;
         flex-direction: column;
@@ -55,7 +49,17 @@
                 alt="No Image" />
         <?php endif; ?>
         <?php the_title('<h1 class="post-title">', '</h1>'); ?>
-        <?php the_date(); ?> in <?php the_category(", "); ?>
+
+        <?php if (is_single()): ?>
+            <?php $user_locale = get_user_locale(); ?>
+            <?php if ($user_locale == "en_US"): ?>
+                <?php echo get_the_date('F j, Y'); ?> / Category: <?php the_category(", "); ?>
+            <?php endif; ?>
+            <?php if ($user_locale == "ko_KR"): ?>
+                <?php echo eva_v1_get_korean_date(); ?> / 카테고리: <?php the_category(", "); ?>
+            <?php endif; ?>
+        <?php endif; ?>
+
         <br>
         <?php the_tags(); ?>
         <?php the_content(); ?>

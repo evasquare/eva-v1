@@ -15,12 +15,18 @@ iframe {
     height: auto;
 }
 
-/*
-  Plugin: code block pro
-*/
 .wp-block-image,
 .wp-post-image,
 iframe {
     border-radius: 15px;
     overflow: hidden;
+}
+
+/*
+  Plugin: code block pro
+*/
+.wp-block-kevinbatdorf-code-block-pro {
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px 0px;
 }
