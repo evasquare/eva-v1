@@ -84,7 +84,7 @@
                     <?php
                     while (have_posts()) {
                         the_post();
-                        get_template_part('template-parts/index/article');
+                        get_template_part('template-parts/list-view/post');
                     }
                     ?>
                 <?php else : ?>
@@ -96,5 +96,3 @@
     </div>
     <?php get_footer(); ?>
 </body>
-
-<?php wp_reset_postdata(); ?>

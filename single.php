@@ -84,7 +84,7 @@
                     <h1 class="comment-title">댓글</h1>
                 <?php endif; ?>
 
-                <?php get_template_part('template-parts/content/comments'); ?>
+                <?php get_template_part('template-parts/comments'); ?>
             <?php endwhile ?>
 
             <?php

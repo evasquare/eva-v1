@@ -48,16 +48,10 @@
                 src="<?php echo get_theme_file_uri(); ?>/assets/images/no-image.png"
                 alt="No Image" />
         <?php endif; ?>
-        <?php the_title('<h1 class="post-title">', '</h1>'); ?>
-
-        <?php if (is_single()): ?>
-            <?php $user_locale = get_user_locale(); ?>
-            <?php if ($user_locale == "en_US"): ?>
-                <?php echo get_the_date('F j, Y'); ?> / Category: <?php the_category(", "); ?>
-            <?php endif; ?>
-            <?php if ($user_locale == "ko_KR"): ?>
-                <?php echo eva_v1_get_korean_date(); ?> / 카테고리: <?php the_category(", "); ?>
-            <?php endif; ?>
+        <?php if (strtotime(get_the_title())): ?>
+            <h1 class="post-title"><?php echo date("F j, Y", strtotime(get_the_title())); ?></h1>
+        <?php else: ?>
+            <?php the_title('<h1 class="post-title">', '</h1>'); ?>
         <?php endif; ?>
 
         <?php the_tags(); ?>

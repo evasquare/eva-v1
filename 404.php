@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
     <?php get_template_part('template-parts/nav-bar'); ?>
     <div class="not-found-message">
-        Not Found.
+        Not Found. :(
     </div>
 </body>
 

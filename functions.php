@@ -123,6 +123,7 @@ if (! function_exists('eva_v1_numeric_post_navigation')) {
 
         $output .= '</div>' . "\n";
 
+        wp_reset_postdata();
         echo $output;
     }
 }
