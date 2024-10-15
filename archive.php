@@ -71,12 +71,9 @@
         color: var(--navigation-selected);
     }
 
-    .archive-title {
-        margin-bottom: 0;
-    }
-
-    .archive-description {
-        margin: 0;
+    .archive-info {
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 </style>
 
@@ -87,8 +84,11 @@
 
     <div class="center">
         <div class="archive">
-            <h1 class="archive-title"><?php echo get_the_archive_title() ?></h1>
-            <p class="archive-description"><?php echo get_the_archive_description() ?></p>
+            <div class="archive-info">
+                <h1><?php the_archive_title() ?></h1>
+                <?php the_archive_description() ?>
+            </div>
+
             <div class="grid">
                 <?php if (have_posts()) : ?>
                     <?php
