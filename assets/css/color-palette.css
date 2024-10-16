@@ -2,7 +2,7 @@ body {
     --text-color: black;
     --background-color: white;
 
-    --scheme-color: #4640cd;
+    --accent-color: #4640cd;
     --link-color: #5d57c5;
 
     --article-date-color: #797979;
@@ -13,7 +13,7 @@ body {
         --background-color: rgb(14, 14, 14);
         --text-color: white;
 
-        --scheme-color: #4640cd;
+        --accent-color: #4640cd;
         --link-color: #a7a2ff;
 
         --article-date-color: #c5c5c5;

@@ -22,7 +22,7 @@
         background: none;
 
         padding: 15px 20px;
-        background-color: var(--scheme-color);
+        background-color: var(--accent-color);
         color: white;
         font-size: 14px;
         font-weight: 500;

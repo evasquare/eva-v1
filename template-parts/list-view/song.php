@@ -6,7 +6,6 @@
 
 <article>
     <a class="no-decoration" href="<?php the_permalink(); ?>">
-
         <?php if (strtotime(get_the_title())): ?>
             <h2 class="list-article-title"><?php echo date("F j, Y", strtotime(get_the_title())); ?></h2>
         <?php else: ?>

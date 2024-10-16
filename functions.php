@@ -8,6 +8,7 @@ add_action('after_setup_theme', 'eva_v1_supports');
 
 function eva_v1_setup()
 {
+    wp_enqueue_script('eva_v1_js', get_theme_file_uri('/assets/js/mobileMenu.js'), array(), '1.0', true);
     wp_enqueue_style('eva_v1_main_styles', get_theme_file_uri('/style.css'));
 }
 
@@ -32,7 +33,6 @@ function cyb_filter_gettext($translated, $original, $domain)
     return $translated;
 }
 add_filter('gettext', 'cyb_filter_gettext', 10, 3);
-
 
 if (! function_exists('eva_v1_numeric_post_navigation')) {
     /** Original Code:

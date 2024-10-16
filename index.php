@@ -1,3 +1,5 @@
+<?php get_header() ?>
+
 <style>
     .center {
         display: flex;
@@ -71,8 +73,6 @@
         color: var(--navigation-selected);
     }
 </style>
-
-<?php get_header() ?>
 
 <body <?php body_class(); ?>>
     <?php get_template_part('template-parts/nav-bar'); ?>

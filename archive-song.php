@@ -1,3 +1,5 @@
+<?php get_header() ?>
+
 <style>
     .center {
         display: flex;
@@ -71,20 +73,18 @@
         color: var(--navigation-selected);
     }
 
-    .archive-title {
+    .archive__archive-title {
         margin-bottom: 0;
     }
 </style>
-
-<?php get_header() ?>
 
 <body <?php body_class(); ?>>
     <?php get_template_part('template-parts/nav-bar'); ?>
 
     <div class="center">
         <div class="archive">
-            <h1 class="archive-title">Songs</h1>
-            <p class="archive-description">Check out what I listen to!</p>
+            <h1 class="archive__archive-title">Songs</h1>
+            <p>Check out what I listen to!</p>
             <?php if (have_posts()) : ?>
                 <?php
                 while (have_posts()) {

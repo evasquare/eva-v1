@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <style>
     .center {
         display: flex;
@@ -64,8 +66,6 @@
         text-align: right;
     }
 </style>
-
-<?php get_header(); ?>
 
 <body <?php body_class(); ?>>
     <?php get_template_part('template-parts/nav-bar'); ?>

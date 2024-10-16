@@ -16,7 +16,6 @@
 </style>
 
 <article>
-
     <a class="no-decoration" href="<?php the_permalink(); ?>">
         <?php if (has_post_thumbnail()): ?>
             <?php the_post_thumbnail(); ?>

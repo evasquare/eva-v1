@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <style>
     .center {
         display: flex;
@@ -11,8 +13,6 @@
         max-width: var(--content-desktop-view-max-width);
     }
 </style>
-
-<?php get_header(); ?>
 
 <body <?php body_class(); ?>>
     <?php get_template_part('template-parts/nav-bar'); ?>
