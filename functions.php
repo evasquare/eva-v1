@@ -15,6 +15,15 @@ function eva_v1_setup()
 add_action('wp_enqueue_scripts', 'eva_v1_setup');
 
 
+function eva_v1_adjust_queries($query)
+{
+    if (!is_admin() && is_post_type_archive('song') && is_main_query()) {
+        $query->set('order', 'DESC');
+    }
+}
+
+add_action('pre_get_posts', 'eva_v1_adjust_queries');
+
 /** Original Code:
  * https://wordpress.stackexchange.com/questions/188332/override-default-wordpress-core-translation
  */
