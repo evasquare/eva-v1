@@ -83,8 +83,8 @@
 
     <div class="center">
         <div class="archive">
-            <h1 class="archive__archive-title">Songs</h1>
-            <p>Check out what I listen to!</p>
+            <!-- <h1 class="archive__archive-title">Songs</h1>
+            <p>Check out what I listen to!</p> -->
             <?php if (have_posts()) : ?>
                 <?php
                 while (have_posts()) {

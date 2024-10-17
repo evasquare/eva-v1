@@ -32,7 +32,7 @@
     <p class="article-date">
         <?php $user_locale = get_user_locale(); ?>
         <?php if ($user_locale == "en_US"): ?>
-            <?php echo get_the_date('F j, Y'); ?>
+            <?php echo get_the_date('Y-m-j'); ?>
         <?php endif; ?>
         <?php if ($user_locale == "ko_KR"): ?>
             <?php echo eva_v1_get_korean_date(); ?>
