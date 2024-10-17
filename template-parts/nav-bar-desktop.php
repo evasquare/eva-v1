@@ -100,6 +100,12 @@
                         src="<?php echo get_theme_file_uri(); ?>/assets/images/email-black.svg"
                         alt="Send Email" />
                 </a>
+                <a class="hover-transition" href="<?php echo site_url('/songs') ?>">
+                    <img
+                        class="icon"
+                        src="<?php echo get_theme_file_uri(); ?>/assets/images/song-black.svg"
+                        alt="Songs" />
+                </a>
                 <div class="language-switch">
                     <?php if ($user_locale == "en_US"): ?>
                         <a class="language-switch__lang-button" href="/ko">
@@ -131,6 +137,12 @@
                         class="icon hover-transition"
                         src="<?php echo get_theme_file_uri(); ?>/assets/images/email-white.svg"
                         alt="Send Email" />
+                </a>
+                <a class="hover-transition" href="<?php echo site_url('/songs') ?>">
+                    <img
+                        class="icon"
+                        src="<?php echo get_theme_file_uri(); ?>/assets/images/song-white.svg"
+                        alt="Songs" />
                 </a>
                 <div class="language-switch">
                     <?php if ($user_locale != "en_US"): ?>
