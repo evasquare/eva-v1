@@ -18,12 +18,26 @@
             display: block;
         }
     }
+
+    .js-only {
+        display: none;
+    }
+
+    .js-detected {
+        display: flex;
+    }
 </style>
+
 
 
 <div class="nav-bar-desktop">
     <?php get_template_part('template-parts/nav-bar-desktop'); ?>
 </div>
 <div class="nav-bar-mobile">
-    <?php get_template_part('template-parts/nav-bar-mobile'); ?>
+    <noscript>
+        <?php get_template_part('template-parts/nav-bar-desktop'); ?>
+    </noscript>
+    <div class="js-only">
+        <?php get_template_part('template-parts/nav-bar-mobile'); ?>
+    </div>
 </div>

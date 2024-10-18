@@ -35,6 +35,7 @@
 
     @keyframes showMenu {
         0% {
+            transform: translate(0, -30px);
             opacity: 0;
             display: hidden;
         }
@@ -45,6 +46,7 @@
         }
 
         100% {
+            transform: translate(0, 0);
             opacity: 1;
         }
     }
@@ -54,13 +56,16 @@
         0% {
             opacity: 1;
             visibility: visible;
+            transform: translate(0, 0);
         }
 
         99% {
             opacity: 0;
+
         }
 
         100% {
+            transform: translate(0, -30px);
             opacity: 0;
             visibility: hidden;
         }

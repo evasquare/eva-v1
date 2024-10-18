@@ -24,3 +24,7 @@ window.addEventListener("resize", (e) => {
         document.body.classList.toggle("scroll-lock", false);
     }
 });
+
+document
+    .querySelectorAll(".js-only")
+    .forEach((x) => x.classList.toggle("js-only"));
