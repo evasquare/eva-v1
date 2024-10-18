@@ -67,11 +67,11 @@
     }
 
     .show-menu {
-        animation: showMenu 0.18s ease-out forwards;
+        animation: showMenu 0.15s ease-out forwards;
     }
 
     .hide-menu {
-        animation: hideMenu 0.18s ease-in forwards;
+        animation: hideMenu 0.15s ease-in forwards;
     }
 
     .mobile-menu-view {
