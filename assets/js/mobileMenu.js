@@ -21,5 +21,6 @@ window.addEventListener("resize", (e) => {
         mobileMenu.classList.toggle("hide-default", true);
         mobileMenu.classList.toggle("show-menu", false);
         mobileMenu.classList.toggle("hide-menu", false);
+        document.body.classList.toggle("scroll-lock", false);
     }
 });
