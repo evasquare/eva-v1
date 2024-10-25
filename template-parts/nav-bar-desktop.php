@@ -108,24 +108,6 @@
                             alt="Songs" />
                     </a>
                 <?php endif; ?>
-                <div class="language-switch">
-                    <?php if ($user_locale == "en_US"): ?>
-                        <a class="language-switch__lang-button" href="/ko">
-                            <img
-                                class="icon hover-transition"
-                                src="<?php echo get_theme_file_uri(); ?>/assets/images/korean-black.svg"
-                                alt="Korean" />
-                        </a>
-                    <?php endif; ?>
-                    <?php if ($user_locale == "ko_KR"): ?>
-                        <a class="language-switch__lang-button " href="/">
-                            <img
-                                class="icon hover-transition"
-                                src="<?php echo get_theme_file_uri(); ?>/assets/images/english-black.svg"
-                                alt="English" />
-                        </a>
-                    <?php endif; ?>
-                </div>
             </div>
             <div class="white-icons">
                 <a href="https://github.com/evasquare">
@@ -148,36 +130,9 @@
                             alt="Songs" />
                     </a>
                 <?php endif; ?>
-                <div class="language-switch">
-                    <?php if ($user_locale != "en_US"): ?>
-                        <a class="language-switch__lang-button " href="/">
-                            <img
-                                class="icon hover-transition"
-                                src="<?php echo get_theme_file_uri(); ?>/assets/images/english-white.svg"
-                                alt="English" />
-                        </a>
-                    <?php endif; ?>
-                    <?php if ($user_locale != "ko_KR"): ?>
-                        <a class="language-switch__lang-button" href="/ko">
-                            <img
-                                class="icon hover-transition"
-                                src="<?php echo get_theme_file_uri(); ?>/assets/images/korean-white.svg"
-                                alt="Korean" />
-                        </a>
-                    <?php endif; ?>
-                </div>
             </div>
 
-            <?php
-            if ($user_locale == "en_US") {
-                $now_url = get_permalink(get_page_by_path('now'));
-            } else if ($user_locale == "ko_KR") {
-                $now_url = get_permalink(get_page_by_path('now-ko'));
-            } else {
-                $now_url = get_permalink(get_page_by_path('now'));
-            }
-            ?>
-            <a class="hover-transition no-decoration" href="<?php echo $now_url ?>">
+            <a class="hover-transition no-decoration" href="<?php echo site_url('/now') ?>">
                 <div class="big-button">
                     Now
                 </div>
