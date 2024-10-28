@@ -76,7 +76,7 @@
 <div class="center">
     <div class="nav-bar">
         <div class="left">
-            <a class="logo" href="<?php echo home_url(); ?>">
+            <a class="logo" href="<?php echo esc_url(site_url('/')); ?>">
                 <img
                     class="hover-transition"
                     src="<?php echo get_theme_file_uri(); ?>/assets/images/logo.png"
@@ -101,7 +101,7 @@
                         alt="Send Email" />
                 </a>
                 <?php if ($user_locale == "en_US"): ?>
-                    <a class="hover-transition" href="<?php echo site_url('/songs') ?>">
+                    <a class="hover-transition" href="<?php echo esc_url(site_url('/songs')) ?>">
                         <img
                             class="icon"
                             src="<?php echo get_theme_file_uri(); ?>/assets/images/song-black.svg"
@@ -123,7 +123,7 @@
                         alt="Send Email" />
                 </a>
                 <?php if ($user_locale == "en_US"): ?>
-                    <a class="hover-transition" href="<?php echo site_url('/songs') ?>">
+                    <a class="hover-transition" href="<?php echo esc_url(site_url('/songs')) ?>">
                         <img
                             class="icon"
                             src="<?php echo get_theme_file_uri(); ?>/assets/images/song-white.svg"
@@ -132,7 +132,7 @@
                 <?php endif; ?>
             </div>
 
-            <a class="hover-transition no-decoration" href="<?php echo site_url('/now') ?>">
+            <a class="hover-transition no-decoration" href="<?php echo esc_url(site_url('/now')) ?>">
                 <div class="big-button">
                     Now
                 </div>

@@ -225,7 +225,7 @@
 
                 <h2 class="menu-item__name">Email</h2>
             </a>
-            <a class="menu-list__menu-item menu-list__hover no-decoration" href="<?php echo site_url('/songs') ?>">
+            <a class="menu-list__menu-item menu-list__hover no-decoration" href="<?php echo esc_url(site_url('/songs')) ?>">
                 <div class="icon-height white-icon">
                     <img
                         class="icon-height"
@@ -241,7 +241,7 @@
 
                 <h2 class="menu-item__name">Songs</h2>
             </a>
-            <a class="menu-list__menu-item__now no-decoration menu-list__hover" href="<?php echo site_url('/now') ?>">
+            <a class="menu-list__menu-item__now no-decoration menu-list__hover" href="<?php echo esc_url(site_url('/now')) ?>">
                 <div class="circle-icon__accent-color"></div>
                 <h2 class="menu-item__name">Now</h2>
             </a>
@@ -250,7 +250,7 @@
 
     <div class="nav-bar">
         <div class="left">
-            <a class="logo" href="<?php echo home_url(); ?>">
+            <a class="logo" href="<?php echo esc_url(site_url('/')); ?>">
                 <img
                     class="hover-transition"
                     src="<?php echo get_theme_file_uri(); ?>/assets/images/logo.png"
