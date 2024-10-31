@@ -47,7 +47,7 @@ foreach (explode("\n", $input) as $line) {
 
     foreach ($splitted_by_tabs as $item) {
         if ($item != "") {
-            $new_title = str_replace("- ", "", end($splitted_by_tabs));
+            $new_title = preg_replace('/- /', '', end($splitted_by_tabs), 1);
             break;
         } else {
             $new_indent_level += 1;
@@ -56,7 +56,7 @@ foreach (explode("\n", $input) as $line) {
 
     // Check URL
     if (str_starts_with($new_title, "https://")) {
-        if ($new_indent_level <= $previous_indent_level) {
+        if ($new_indent_level < $previous_indent_level) {
             $is_successful = false;
         }
 
