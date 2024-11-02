@@ -17,6 +17,11 @@
         align-content: center;
     }
 
+    .index>.not-found {
+        text-align: center;
+        margin: 0;
+    }
+
     .index>.grid {
         display: grid;
         gap: 20px;
@@ -79,18 +84,18 @@
 
     <div class="center">
         <div class="index">
-            <div class="grid">
-                <?php if (have_posts()) : ?>
+            <?php if (have_posts()) : ?>
+                <div class="grid">
                     <?php
                     while (have_posts()) {
                         the_post();
                         get_template_part('template-parts/list-view/post');
                     }
                     ?>
-                <?php else : ?>
-                    <p>No post found! :(</p>
-                <?php endif; ?>
-            </div>
+                </div>
+            <?php else : ?>
+                <p class="not-found">No post found! :(</p>
+            <?php endif; ?>
             <?php eva_v1_numeric_post_navigation($paged) ?>
         </div>
     </div>
