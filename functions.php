@@ -8,7 +8,11 @@ add_action('after_setup_theme', 'eva_v1_supports');
 
 function eva_v1_setup()
 {
-    wp_enqueue_script('eva_v1_js', get_theme_file_uri('/assets/js/mobileMenu.js'), array(), '1.0', true);
+    wp_enqueue_script('eva_v1_mobile_menu', get_theme_file_uri('/assets/js/mobileMenu.js'), array(), '1.0', true);
+    wp_enqueue_script('eva_v1_song_posts', get_theme_file_uri('/assets/js/songPosts.js'), array(), '1.0', true);
+    wp_localize_script('eva_v1_song_posts', 'evaV1Data', array(
+        'root_url' => get_site_url(),
+    ));
     wp_enqueue_style('eva_v1_main_styles', get_theme_file_uri('/style.css'));
 }
 
@@ -158,3 +162,35 @@ if (! function_exists('eva_v1_reverse_post_navigation')) {
         echo $navigation;
     }
 }
+
+function eva_v1_custom_rest()
+{
+    $query_argument = array(
+        'post_type' => 'song',
+        'orderby' => 'rand',
+        'posts_per_page' => '1',
+        'no_found_rows' => true,
+        'cache_results' => false,
+    );
+
+    $random_post_query = new WP_Query($query_argument);
+
+    while ($random_post_query->have_posts()) {
+        $random_post_query->the_post();
+        $random_post_permalink = get_permalink();
+    };
+
+    wp_reset_postdata();
+
+    return array('songPostUrl' => $random_post_permalink);
+}
+
+function eva_v1_register_rest()
+{
+    register_rest_route('eva/v1', '/songs/random-song-post', array(
+        'methods' => WP_REST_Server::READABLE,
+        'callback' => 'eva_v1_custom_rest',
+    ));
+}
+
+add_action('rest_api_init', 'eva_v1_register_rest');

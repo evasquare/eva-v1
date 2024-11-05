@@ -84,7 +84,11 @@
     <div class="center">
         <div class="archive">
             <h1 class="archive__archive-title">Songs</h1>
-            <p>Check out what I listen to!</p>
+            <p>Check out what I listen to!
+                <span class="js-only">
+                    <br>Or... I could <a id="random-song-page-button" href="#">open a random one</a> for you!
+                </span>
+            </p>
             <?php if (have_posts()) : ?>
                 <?php
                 while (have_posts()) {
