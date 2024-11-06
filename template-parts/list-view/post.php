@@ -16,7 +16,7 @@
 
     .article-title {
         padding-right: 0.6em;
-        line-height: 1.3;
+        line-height: 1.4;
     }
 </style>
 

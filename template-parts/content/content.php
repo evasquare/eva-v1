@@ -44,6 +44,7 @@
 
     .post-title {
         margin-bottom: 10px;
+        line-height: 1.4;
     }
 </style>
 
