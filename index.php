@@ -24,7 +24,7 @@
 
     .index>.grid {
         display: grid;
-        gap: 20px;
+        gap: 40px 20px;
         grid-template-columns: repeat(2, 1fr);
 
         @media only screen and (max-width: 600px) {

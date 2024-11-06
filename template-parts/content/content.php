@@ -36,6 +36,15 @@
     .wp-block-image img {
         width: 100% !important;
     }
+
+    .post-info {
+        color: var(--article-date-color);
+        margin-bottom: 50px;
+    }
+
+    .post-title {
+        margin-bottom: 10px;
+    }
 </style>
 
 <div class="wrapper">
@@ -51,8 +60,10 @@
         <?php the_title('<h1 class="post-title">', '</h1>'); ?>
 
         <?php if (is_single()): ?>
-            <?php $user_locale = get_user_locale(); ?>
-            <?php echo get_the_date('F j, Y'); ?> / Category: <?php the_category(", "); ?>
+            <div class="post-info">
+                <?php $user_locale = get_user_locale(); ?>
+                <?php echo get_the_date('F j, Y'); ?> / Category: <?php the_category(", "); ?>
+            </div>
         <?php endif; ?>
 
         <?php the_tags(); ?>

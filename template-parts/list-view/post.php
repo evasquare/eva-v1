@@ -1,6 +1,6 @@
 <style>
     .article-title {
-        margin: 22px 0 8px 0;
+        margin: 18px 0 6px 0;
         color: var(--text-color);
     }
 
@@ -12,6 +12,11 @@
     .attachment-post-thumbnail {
         background-size: cover;
         object-fit: cover;
+    }
+
+    .article-title {
+        padding-right: 0.6em;
+        line-height: 1.3;
     }
 </style>
 
