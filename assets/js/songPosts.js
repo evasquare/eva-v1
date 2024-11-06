@@ -6,14 +6,14 @@ randomSongPageButton?.addEventListener("click", async (event) => {
     let url = undefined;
 
     (async () => {
-        const a = await (
+        const songPosts = await (
             await fetch(
                 `${evaV1Data.root_url}/wp-json/eva/v1/songs/random-song-post`,
                 { method: "GET" }
             )
         ).json();
-        url = a.songPostUrl;
 
+        const url = songPosts[Math.floor(Math.random() * songPosts.length)];
         if (url) {
             const a = document.createElement("a");
             a.href = url;

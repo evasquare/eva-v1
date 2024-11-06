@@ -167,22 +167,21 @@ function eva_v1_custom_rest()
 {
     $query_argument = array(
         'post_type' => 'song',
-        'orderby' => 'rand',
-        'posts_per_page' => '1',
-        'no_found_rows' => true,
-        'cache_results' => false,
+        'posts_per_page' => -1,
     );
 
     $random_post_query = new WP_Query($query_argument);
 
+    $arr = array();
+
     while ($random_post_query->have_posts()) {
         $random_post_query->the_post();
-        $random_post_permalink = get_permalink();
+        array_push($arr, get_permalink());
     };
 
     wp_reset_postdata();
 
-    return array('songPostUrl' => $random_post_permalink);
+    return $arr;
 }
 
 function eva_v1_register_rest()
