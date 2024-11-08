@@ -1,0 +1,19 @@
+.post-article-wrapper .article-title {
+    margin: 18px 0 6px 0;
+    color: var(--text-color);
+}
+
+.post-article-wrapper .article-date {
+    margin: 0 0 16px 0;
+    color: var(--article-date-color);
+}
+
+.post-article-wrapper .attachment-post-thumbnail {
+    background-size: cover;
+    object-fit: cover;
+}
+
+.post-article-wrapper .article-title {
+    padding-right: 0.6em;
+    line-height: 1.4;
+}

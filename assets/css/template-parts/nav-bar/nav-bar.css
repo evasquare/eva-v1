@@ -1,0 +1,27 @@
+@media only screen and (min-width: 600px) {
+    .nav-bar-desktop {
+        display: block;
+    }
+
+    .nav-bar-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-bar-desktop {
+        display: none;
+    }
+
+    .nav-bar-mobile {
+        display: block;
+    }
+}
+
+.js-only {
+    display: none;
+}
+
+.js-detected {
+    display: flex;
+}

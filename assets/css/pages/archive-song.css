@@ -1,0 +1,8 @@
+.archive-wrapper {
+    width: var(--desktop-view-width);
+    max-width: var(--desktop-view-max-width);
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}

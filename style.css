@@ -9,6 +9,9 @@ Author URI: https://evasquare.com/
 @import "./assets/css/other-variables.css";
 @import "./assets/css/wp-block.css";
 
+@import "./assets/css/pages/import.css";
+@import "./assets/css/template-parts/import.css";
+
 body {
     color: var(--text-color);
     background: var(--background-color);
@@ -36,4 +39,11 @@ a {
 
 .scroll-lock {
     overflow: hidden;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }

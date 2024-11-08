@@ -1,0 +1,30 @@
+.index-wrapper {
+    width: var(--desktop-view-width);
+    max-width: var(--desktop-view-max-width);
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.index-wrapper .not-found {
+    text-align: center;
+    margin: 0;
+}
+
+.index-wrapper .grid {
+    display: grid;
+    gap: 40px 20px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.index-wrapper .attachment-post-thumbnail,
+.index-wrapper .no-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
