@@ -163,33 +163,4 @@ if (! function_exists('eva_v1_reverse_post_navigation')) {
     }
 }
 
-function eva_v1_custom_rest()
-{
-    $query_argument = array(
-        'post_type' => 'song',
-        'posts_per_page' => -1,
-    );
-
-    $random_post_query = new WP_Query($query_argument);
-
-    $arr = array();
-
-    while ($random_post_query->have_posts()) {
-        $random_post_query->the_post();
-        array_push($arr, get_permalink());
-    };
-
-    wp_reset_postdata();
-
-    return $arr;
-}
-
-function eva_v1_register_rest()
-{
-    register_rest_route('eva/v1', '/songs/random-song-post', array(
-        'methods' => WP_REST_Server::READABLE,
-        'callback' => 'eva_v1_custom_rest',
-    ));
-}
-
-add_action('rest_api_init', 'eva_v1_register_rest');
+require get_theme_file_path('/inc/routes.php');

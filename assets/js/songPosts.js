@@ -8,7 +8,7 @@ randomSongPageButton?.addEventListener("click", async (event) => {
     (async () => {
         const songPosts = await (
             await fetch(
-                `${evaV1Data.root_url}/wp-json/eva/v1/songs/random-song-post`,
+                `${evaV1Data.root_url}/wp-json/eva-theme/v1/songs/song-urls`,
                 { method: "GET" }
             )
         ).json();
