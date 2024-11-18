@@ -41,44 +41,6 @@ function eva_plugin_disable_gutenberg($gutenberg_filter, $post_type)
 
 add_filter('use_block_editor_for_post_type', 'eva_plugin_disable_gutenberg', 10, 2);
 
-function eva_plugin_song_shortcode($atts)
-{
-    $atts = shortcode_atts(
-        array(
-            'heading_level' => '2',
-            'song_name' => 'Song Name',
-            'url' => '',
-        ),
-        $atts
-    );
-
-    $heading_level = $atts["heading_level"];
-    $song_name = $atts["song_name"];
-    $url = $atts["url"];
-
-    // Ensure heading level is between 2 and 6
-    if (!in_array($heading_level, range(2, 6))) {
-        $heading_level = '2';
-    }
-
-    // Check if URL is provided, otherwise return an empty string or error message
-    if (empty($url)) {
-        return '<p>Please provide a valid YouTube URL.</p>';
-    }
-
-    $returning_value = <<<MARKER
-    <!-- wp:heading {"level":$heading_level} -->
-    <h$heading_level class="wp-block-heading">$song_name</h$heading_level>
-    <!-- /wp:heading -->
-
-    <iframe title="$song_name"
-    src="https://www.youtube.com/embed/$url?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-    MARKER;
-
-    return $returning_value;
-}
-add_shortcode('song', 'eva_plugin_song_shortcode');
-
 function eva_plugin_add_custom_import_button()
 {
     global $current_screen;
