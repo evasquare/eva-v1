@@ -1,3 +1,12 @@
+<style>
+    h2:not(:first-child),
+    h3:not(:first-child),
+    h4:not(:first-child),
+    h5:not(:first-child) {
+        margin-top: 42px;
+    }
+</style>
+
 <?php get_header(); ?>
 
 <div class="center">
