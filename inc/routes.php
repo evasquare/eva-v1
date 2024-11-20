@@ -28,3 +28,5 @@ function eva_v1_register_rest()
         'callback' => 'eva_v1_song_urls',
     ));
 }
+
+add_action('rest_api_init', 'eva_v1_register_rest');

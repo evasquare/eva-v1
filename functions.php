@@ -1,4 +1,6 @@
 <?php
+require get_theme_file_path('/inc/routes.php');
+
 function eva_v1_supports()
 {
     add_theme_support('post-thumbnails');
@@ -162,5 +164,3 @@ if (! function_exists('eva_v1_reverse_post_navigation')) {
         echo $navigation;
     }
 }
-
-require get_theme_file_path('/inc/routes.php');
