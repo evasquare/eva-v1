@@ -47,8 +47,3 @@
 .selected a {
     color: var(--navigation-selected);
 }
-
-.archive-info {
-    margin-top: 0;
-    margin-bottom: 20px;
-}

@@ -1,13 +1,17 @@
 <?php get_header(); ?>
 
 <div class="center">
-    <div class="archive-wrapper">
-        <h1 class="archive-title">Songs</h1>
-        <p>Check out what I listen to!
-            <span class="js-only">
-                <br>Or... I could <a id="random-song-page-button" href="#">open a random one</a> for you!
-            </span>
-        </p>
+    <div class="archive-song-wrapper">
+        <div class="archive-info">
+            <h1 class="archive-title">Songs</h1>
+            <div class="archive-description">
+                Check out what I listen to!
+                <span class="js-only">
+                    <br>Or... I could <a id="random-song-page-button" href="#">open a random one</a> for you!
+                </span>
+            </div>
+        </div>
+
         <?php if (have_posts()) : ?>
             <?php
             while (have_posts()) {

@@ -1,8 +1,23 @@
-.archive-wrapper {
+.archive-song-wrapper {
     width: var(--desktop-view-width);
     max-width: var(--desktop-view-max-width);
 
     display: flex;
     flex-direction: column;
     align-content: center;
+}
+
+.archive-song-wrapper .archive-info {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+    margin-top: 0;
+}
+
+.archive-song-wrapper .archive-title {
+    margin: 0;
+}
+
+.archive-song-wrapper .archive-description {
+    margin-top: 0.67em;
 }

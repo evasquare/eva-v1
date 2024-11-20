@@ -80,3 +80,8 @@
     transform: none;
     cursor: pointer;
 }
+
+.single-wrapper .post-title:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+}

@@ -3,8 +3,12 @@
 <div class="center">
     <div class="archive-wrapper">
         <div class="archive-info">
-            <h1><?php the_archive_title() ?></h1>
-            <?php the_archive_description() ?>
+            <h1 class="archive-title">
+                <?php the_archive_title() ?>
+            </h1>
+            <div class="archive-description">
+                <?php echo get_the_archive_description() ?>
+            </div>
         </div>
 
         <div class="grid">

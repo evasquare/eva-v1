@@ -23,3 +23,18 @@
     height: auto;
     aspect-ratio: 16/9;
 }
+
+.archive-wrapper .archive-info {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    margin-top: 0;
+}
+
+.archive-wrapper .archive-title {
+    margin: 0;
+}
+
+.archive-wrapper .archive-description p {
+    margin-top: 0.67em;
+}
