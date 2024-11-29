@@ -14,7 +14,13 @@
             </h2>
         </a>
         <p class="article-date">
-            <?php echo get_the_date('F j, Y'); ?>
+            <?php $user_locale = get_user_locale(); ?>
+            <?php if ($user_locale == "en_US"): ?>
+                <?php echo get_the_date('F j, Y'); ?>
+            <?php endif; ?>
+            <?php if ($user_locale == "ko_KR"): ?>
+                <?php echo eva_v1_get_korean_date(); ?>
+            <?php endif; ?>
         </p>
         <?php the_excerpt(); ?>
     </article>
