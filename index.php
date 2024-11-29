@@ -15,6 +15,8 @@
             <p class="not-found">No post found! :(</p>
         <?php endif; ?>
         <?php eva_v1_numeric_post_navigation($paged) ?>
+
+        <?php get_template_part('template-parts/category'); ?>
     </div>
 </div>
 

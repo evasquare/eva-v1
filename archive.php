@@ -24,6 +24,8 @@
             <?php endif; ?>
         </div>
         <?php eva_v1_numeric_post_navigation($paged) ?>
+
+        <?php get_template_part('template-parts/category'); ?>
     </div>
 </div>
 

@@ -1,0 +1,10 @@
+.category-wrapper {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-wrapper ul {
+    margin: 0;
+}
