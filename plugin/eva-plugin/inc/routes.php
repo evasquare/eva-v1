@@ -1,7 +1,5 @@
 <?php
 
-use Nette\Utils\Strings;
-
 function eva_plugin_plain_text_list()
 {
     $query_argument = array(
