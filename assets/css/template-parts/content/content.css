@@ -24,3 +24,7 @@
     margin-bottom: 10px;
     line-height: 1.4;
 }
+
+.content {
+    word-wrap: break-word;
+}
