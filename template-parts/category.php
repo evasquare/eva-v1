@@ -4,7 +4,13 @@ $categories = get_categories();
 ?>
 
 <div class="category-wrapper">
-    <h3>Categories</h3>
+
+    <?php if ($user_locale == "en_US"): ?>
+        <h3>Categories</h3>
+    <?php endif; ?>
+    <?php if ($user_locale == "ko_KR"): ?>
+        <h3>카테고리</h3>
+    <?php endif; ?>
 
     <ul>
         <?php foreach ($categories as $category): ?>
