@@ -19,6 +19,12 @@
                         src="<?php echo get_theme_file_uri(); ?>/assets/images/github-black.svg"
                         alt="Github" />
                 </a>
+                <a href="https://bsky.app/profile/evasquare.bsky.social">
+                    <img
+                        class="icon hover-transition"
+                        src="<?php echo get_theme_file_uri(); ?>/assets/images/bluesky-black.svg"
+                        alt="BlueSky" />
+                </a>
                 <a class="hover-transition" href="mailto:eva@evasquare.com">
                     <img
                         class="icon"
@@ -40,6 +46,12 @@
                         class="icon hover-transition"
                         src="<?php echo get_theme_file_uri(); ?>/assets/images/github-white.svg"
                         alt="Github" />
+                </a>
+                <a href="https://bsky.app/profile/evasquare.bsky.social">
+                    <img
+                        class="icon hover-transition"
+                        src="<?php echo get_theme_file_uri(); ?>/assets/images/bluesky-white.svg"
+                        alt="BlueSky" />
                 </a>
                 <a href="mailto:eva@evasquare.com">
                     <img
