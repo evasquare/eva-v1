@@ -33,7 +33,7 @@
                         alt="BlueSky" />
                 </div>
 
-                <h2 class="menu-item__name">BlueSky</h2>
+                <h2 class="menu-item__name">Bluesky</h2>
             </a>
             <a class="menu-list__menu-item menu-list__hover no-decoration" href="mailto:eva@evasquare.com">
                 <div class="icon-height white-icon">
