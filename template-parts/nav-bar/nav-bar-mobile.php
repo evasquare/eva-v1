@@ -19,22 +19,6 @@
 
                 <h2 class="menu-item__name">Github</h2>
             </a>
-            <a class="menu-list__menu-item menu-list__hover no-decoration" href="https://bsky.app/profile/evasquare.bsky.social">
-                <div class="icon-height white-icon">
-                    <img
-                        class="icon-height"
-                        src="<?php echo get_theme_file_uri(); ?>/assets/images/bluesky-white.svg"
-                        alt="BlueSky" />
-                </div>
-                <div class="icon-height black-icon">
-                    <img
-                        class="icon-height"
-                        src="<?php echo get_theme_file_uri(); ?>/assets/images/bluesky-black.svg"
-                        alt="BlueSky" />
-                </div>
-
-                <h2 class="menu-item__name">Bluesky</h2>
-            </a>
             <a class="menu-list__menu-item menu-list__hover no-decoration" href="mailto:eva@evasquare.com">
                 <div class="icon-height white-icon">
                     <img
