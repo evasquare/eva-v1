@@ -51,9 +51,9 @@
 
                 <h2 class="menu-item__name">Songs</h2>
             </a>
-            <a class="menu-list__menu-item__now no-decoration menu-list__hover" href="<?php echo esc_url(site_url('/now')) ?>">
+            <a class="menu-list__menu-item__now no-decoration menu-list__hover" href="<?php echo esc_url(site_url('/about-me')) ?>">
                 <div class="circle-icon__accent-color"></div>
-                <h2 class="menu-item__name">Now</h2>
+                <h2 class="menu-item__name">About Me</h2>
             </a>
         </div>
     </div>

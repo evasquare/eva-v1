@@ -57,9 +57,9 @@
                 <?php endif; ?>
             </div>
 
-            <a class="hover-transition no-decoration" href="<?php echo esc_url(site_url('/now')) ?>">
+            <a class="hover-transition no-decoration" href="<?php echo esc_url(site_url('/about-me')) ?>">
                 <div class="big-button">
-                    Now
+                    About Me
                 </div>
             </a>
         </div>

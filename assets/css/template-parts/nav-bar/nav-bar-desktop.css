@@ -46,7 +46,7 @@
 .nav-bar-desktop .big-button {
     background-color: var(--accent-color);
     color: white;
-    padding: 32px 38px;
+    padding: 32px 28px;
     border-radius: 150px;
 }
 
