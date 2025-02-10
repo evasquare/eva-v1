@@ -1,3 +1,5 @@
+declare const evaV1Data: { root_url: string };
+
 const randomSongPageButton = document.querySelector("#random-song-page-button");
 
 randomSongPageButton?.addEventListener("click", async (event) => {
