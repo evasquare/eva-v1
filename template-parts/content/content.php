@@ -5,7 +5,7 @@
         <?php elseif (is_singular('post')): ?>
             <img
                 class="no-image"
-                src="<?php echo get_theme_file_uri(); ?>/assets/images/no-image.png"
+                src="<?php echo get_theme_file_uri(); ?>/images/no-image.png"
                 alt="No Image" />
         <?php endif; ?>
         <?php the_title('<h1 class="post-title">', '</h1>'); ?>

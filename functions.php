@@ -10,12 +10,11 @@ add_action('after_setup_theme', 'eva_v1_supports');
 
 function eva_v1_setup()
 {
-    wp_enqueue_script('eva_v1_mobile_menu', get_theme_file_uri('/assets/js/mobileMenu.js'), array(), '1.0', true);
-    wp_enqueue_script('eva_v1_song_posts', get_theme_file_uri('/assets/js/songPosts.js'), array(), '1.0', true);
-    wp_localize_script('eva_v1_song_posts', 'evaV1Data', array(
+    wp_enqueue_script('eva_v1_js', get_theme_file_uri('/build/index.js'), array(), '1.0', true);
+    wp_localize_script('eva_v1_js', 'evaV1Data', array(
         'root_url' => get_site_url(),
     ));
-    wp_enqueue_style('eva_v1_main_styles', get_theme_file_uri('/style.css'));
+    wp_enqueue_style('eva_v1_main_styles', get_theme_file_uri('/build/index.css'));
 }
 
 add_action('wp_enqueue_scripts', 'eva_v1_setup');

@@ -6,7 +6,7 @@
             <?php else: ?>
                 <img
                     class="no-image"
-                    src="<?php echo get_theme_file_uri(); ?>/assets/images/no-image.png"
+                    src="<?php echo get_theme_file_uri(); ?>/images/no-image.png"
                     alt="No Image" />
             <?php endif; ?>
             <h2 class="article-title">

@@ -1,0 +1,43 @@
+@import "./normalize.scss";
+@import "./color-palette.scss";
+@import "./other-variables.scss";
+@import "./wp-block.scss";
+
+@import "./pages/import.scss";
+@import "./template-parts/import.scss";
+
+body {
+    color: var(--text-color);
+    background: var(--background-color);
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.no-decoration,
+.no-decoration:link,
+.no-decoration:visited {
+    text-decoration: none;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.hover-transition {
+    transition: transform 0.16s ease-out;
+    transform: none;
+}
+.hover-transition:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.scroll-lock {
+    overflow: hidden;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}

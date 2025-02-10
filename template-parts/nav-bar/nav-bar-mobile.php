@@ -7,13 +7,13 @@
                 <div class="icon-height white-icon">
                     <img
                         class="icon-height"
-                        src="<?php echo get_theme_file_uri(); ?>/assets/images/github-white.svg"
+                        src="<?php echo get_theme_file_uri(); ?>/images/github-white.svg"
                         alt="Github" />
                 </div>
                 <div class="icon-height black-icon">
                     <img
                         class="icon-height"
-                        src="<?php echo get_theme_file_uri(); ?>/assets/images/github-black.svg"
+                        src="<?php echo get_theme_file_uri(); ?>/images/github-black.svg"
                         alt="Github" />
                 </div>
 
@@ -23,13 +23,13 @@
                 <div class="icon-height white-icon">
                     <img
                         class="icon-height"
-                        src="<?php echo get_theme_file_uri(); ?>/assets/images/email-white.svg"
+                        src="<?php echo get_theme_file_uri(); ?>/images/email-white.svg"
                         alt="Send Email" />
                 </div>
                 <div class="icon-height black-icon">
                     <img
                         class="icon-height"
-                        src="<?php echo get_theme_file_uri(); ?>/assets/images/email-black.svg"
+                        src="<?php echo get_theme_file_uri(); ?>/images/email-black.svg"
                         alt="Send Email" />
                 </div>
 
@@ -39,13 +39,13 @@
                 <div class="icon-height white-icon">
                     <img
                         class="icon-height"
-                        src="<?php echo get_theme_file_uri(); ?>/assets/images/song-white.svg"
+                        src="<?php echo get_theme_file_uri(); ?>/images/song-white.svg"
                         alt="Songs" />
                 </div>
                 <div class="icon-height black-icon">
                     <img
                         class="icon-height"
-                        src="<?php echo get_theme_file_uri(); ?>/assets/images/song-black.svg"
+                        src="<?php echo get_theme_file_uri(); ?>/images/song-black.svg"
                         alt="Songs" />
                 </div>
 
@@ -63,7 +63,7 @@
             <a class="logo" href="<?php echo esc_url(site_url('/')); ?>">
                 <img
                     class="hover-transition"
-                    src="<?php echo get_theme_file_uri(); ?>/assets/images/logo.png"
+                    src="<?php echo get_theme_file_uri(); ?>/images/logo.png"
                     alt="Eva Logo" />
             </a>
         </div>
@@ -74,11 +74,11 @@
             <button class="mobile-menu-toggle">
                 <img
                     class="top-icon white-icon hover-transition"
-                    src="<?php echo get_theme_file_uri(); ?>/assets/images/hamburger-white.svg"
+                    src="<?php echo get_theme_file_uri(); ?>/images/hamburger-white.svg"
                     alt="Hamburger Toggle" />
                 <img
                     class="top-icon black-icon hover-transition"
-                    src="<?php echo get_theme_file_uri(); ?>/assets/images/hamburger-black.svg"
+                    src="<?php echo get_theme_file_uri(); ?>/images/hamburger-black.svg"
                     alt="Hamburger Toggle" />
             </button>
         </div>
