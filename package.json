@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "watch": "nodemon --watch src --ext ts,scss --exec \"npm run build\"",
     "build": "wp-scripts build",
     "check-engines": "wp-scripts check-engines",
     "check-licenses": "wp-scripts check-licenses",
@@ -23,5 +24,8 @@
   "devDependencies": {
     "@wordpress/scripts": "^30.10.0",
     "sass": "^1.84.0"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.9"
   }
 }
