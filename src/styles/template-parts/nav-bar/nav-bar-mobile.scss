@@ -1,3 +1,39 @@
+@keyframes showMenu {
+    0% {
+        transform: translate(0, -30px);
+        opacity: 0;
+        display: hidden;
+    }
+
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideMenu {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, -30px);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 .nav-bar-mobile {
     #wpadminbar {
         z-index: 100002;
@@ -23,42 +59,6 @@
 
         .black-icon {
             display: none;
-        }
-    }
-
-    @keyframes showMenu {
-        0% {
-            transform: translate(0, -30px);
-            opacity: 0;
-            display: hidden;
-        }
-
-        1% {
-            visibility: visible;
-            opacity: 0;
-        }
-
-        100% {
-            transform: translate(0, 0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes hideMenu {
-        0% {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 0);
-        }
-
-        99% {
-            opacity: 0;
-        }
-
-        100% {
-            transform: translate(0, -30px);
-            opacity: 0;
-            visibility: hidden;
         }
     }
 
@@ -91,26 +91,26 @@
 
     .menu-list {
         padding: 35px;
-    }
 
-    .menu-list > h2 {
-        color: var(--text-color);
-    }
+        > h2 {
+            color: var(--text-color);
+        }
 
-    .menu-list > .menu-list__menu-item {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        column-gap: 12px;
-    }
+        > .menu-list__menu-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 12px;
+        }
 
-    .menu-list > .menu-list__menu-item__now {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        column-gap: 12px;
+        > .menu-list__menu-item__now {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 12px;
 
-        margin-top: 10px;
+            margin-top: 10px;
+        }
     }
 
     .menu-list__hover {

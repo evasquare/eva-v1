@@ -59,9 +59,9 @@
 
     .language-switch__lang-button {
         height: 40px;
-    }
 
-    .language-switch__lang-button > img {
-        height: 40px;
+        > img {
+            height: 40px;
+        }
     }
 }
