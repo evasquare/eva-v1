@@ -1,4 +1,4 @@
-@import "content/import.scss";
-@import "list-view/import.scss";
-@import "nav-bar/import.scss";
-@import "category.scss";
+@use "content/import" as *;
+@use "list-view/import" as *;
+@use "nav-bar/import" as *;
+@use "category" as *;

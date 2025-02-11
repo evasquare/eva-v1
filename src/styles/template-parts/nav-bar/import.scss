@@ -1,3 +1,3 @@
-@import "nav-bar-desktop.scss";
-@import "nav-bar-mobile.scss";
-@import "nav-bar.scss";
+@use "nav-bar-desktop" as *;
+@use "nav-bar-mobile" as *;
+@use "nav-bar" as *;

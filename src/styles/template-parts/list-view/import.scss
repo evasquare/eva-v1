@@ -1,2 +1,2 @@
-@import "post.scss";
-@import "song.scss";
+@use "post" as *;
+@use "song" as *;

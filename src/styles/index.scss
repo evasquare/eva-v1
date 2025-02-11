@@ -1,10 +1,10 @@
-@import "./normalize.scss";
-@import "./color-palette.scss";
-@import "./other-variables.scss";
-@import "./wp-block.scss";
+@use "./normalize.scss" as *;
+@use "./color-palette" as *;
+@use "./other-variables" as *;
+@use "./wp-block" as *;
 
-@import "./pages/import.scss";
-@import "./template-parts/import.scss";
+@use "./pages/import" as *;
+@use "./template-parts/import" as *;
 
 body {
     color: var(--text-color);
