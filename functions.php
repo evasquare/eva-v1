@@ -33,7 +33,7 @@ if (! function_exists('eva_v1_numeric_post_navigation')) {
     /** Original Code:
      * https://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
      * */
-    function eva_v1_numeric_post_navigation()
+    function eva_v1_numeric_post_navigation($custom_query)
     {
         if (is_singular()) {
             return;
@@ -161,5 +161,35 @@ if (! function_exists('eva_v1_reverse_post_navigation')) {
         }
 
         echo $navigation;
+    }
+}
+
+/** Original Code:
+ * https://wordpress.stackexchange.com/questions/188332/override-default-wordpress-core-translation
+ */
+function cyb_filter_gettext($translated, $original, $domain)
+{
+    $list = [
+        ["답글 남기기", "댓글 남기기"],
+    ];
+
+    for ($i = 0; $i < count($list); $i++) {
+        if ($translated == $list[$i][0]) {
+            $translated = $list[$i][1];
+        }
+    }
+
+    return $translated;
+}
+add_filter('gettext', 'cyb_filter_gettext', 10, 3);
+
+if (! function_exists('eva_v1_get_korean_date')) {
+    function eva_v1_get_korean_date()
+    {
+        $year = get_the_time('Y');
+        $month = get_the_time('n');
+        $day = get_the_time('j');
+
+        return $year . '년 ' . $month . '월 ' . $day . '일';
     }
 }

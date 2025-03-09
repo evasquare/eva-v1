@@ -1,3 +1,5 @@
+<?php $user_locale = get_user_locale(); ?>
+
 <?php
 $is_successful = true;
 
@@ -81,7 +83,13 @@ foreach (explode("\n", $input) as $line) {
 <div class="wrapper">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <?php if (strtotime(get_the_title())): ?>
-            <h1 class="post-title"><?php echo date("F j, Y", strtotime(get_the_title())); ?></h1>
+            <?php if ($user_locale == "en_US"): ?>
+                <h1 class="post-title"><?php echo date("F j, Y", strtotime(get_the_title())); ?></h1>
+            <?php endif; ?>
+            <?php if ($user_locale == "ko_KR"): ?>
+                <h1 class="list-article-title"><?php echo eva_v1_get_korean_date(); ?></h1>
+            <?php endif; ?>
+
         <?php else: ?>
             <?php the_title('<h1 class="post-title">', '</h1>'); ?>
         <?php endif; ?>
