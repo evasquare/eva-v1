@@ -1,5 +1,11 @@
-<?php get_header(); ?>
+<?php
+global $eva_v1_locale;
+$user_locale = get_user_locale();
+$using_locale = $eva_v1_locale[$user_locale];
+?>
 <?php global $wp_query; ?>
+
+<?php get_header(); ?>
 
 <div class="center">
     <div class="archive-wrapper">
@@ -21,7 +27,7 @@
                 }
                 ?>
             <?php else : ?>
-                <p>No post found! :(</p>
+                <p><?php echo $using_locale['archive']['No post found! :(']; ?></p>
             <?php endif; ?>
         </div>
         <?php eva_v1_numeric_post_navigation($wp_query) ?>

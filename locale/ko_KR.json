@@ -1,0 +1,35 @@
+{
+    "navBar": {
+        "/": "/ko",
+        "Eva Logo": "이바 로고",
+        "Github": "깃허브",
+        "Email": "이메일",
+        "Songs": "음악",
+        "langSwitch": "Switch to English",
+        "About Me": "소개",
+        "/images/korean-white.svg": "/images/english-white.svg",
+        "/images/korean-black.svg": "/images/english-black.svg",
+        "/songs": "/ko/songs",
+        "/about-me": "/ko/about-me-ko",
+        "langSwitchUrl": "/",
+        "Hamburger Toggle": "햄버거 메뉴 토글"
+    },
+    "songs": {
+        "/songs": "/ko/songs"
+    },
+    "content": {
+        "Category": "카테고리"
+    },
+    "404": {
+        "Not found :(": "찾을 수 없음 :("
+    },
+    "archive": {
+        "No post found! :": "포스트를 찾을 수 없어요! :"
+    },
+    "index": {
+        "No post found! :": "포스트를 찾을 수 없어요! :"
+    },
+    "single": {
+        "Comments": "댓글"
+    }
+}

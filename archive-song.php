@@ -1,5 +1,6 @@
-<?php get_header(); ?>
 <?php global $wp_query; ?>
+
+<?php get_header(); ?>
 
 <div class="center">
     <div class="archive-song-wrapper">

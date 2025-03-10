@@ -174,6 +174,35 @@ if (! function_exists('eva_v1_reverse_post_navigation')) {
     }
 }
 
+function eva_v1_songs_rewrite_rules()
+{
+    add_rewrite_rule('^ko/songs/([0-9]+)/?$', 'index.php?song=$matches[1]', 'top');
+}
+add_action('init', 'eva_v1_songs_rewrite_rules', 1);
+
+function eva_v1_register_locale()
+{
+
+    $queue_list = array(
+        array("locale" => 'en_US', "directory" => get_template_directory() . '/locale/en_US.json'),
+        array("locale" => 'ko_KR', "directory" => get_template_directory() . '/locale/ko_KR.json')
+    );
+
+    global $eva_v1_locale;
+
+    $eva_v1_locale = array();
+
+    foreach ($queue_list as $item) {
+        $file_path = $item["directory"];
+        if (file_exists($file_path)) {
+            $json_data = file_get_contents($file_path);
+            $data = json_decode($json_data, true);
+            $eva_v1_locale[$item["locale"]] = $data;
+        }
+    }
+}
+add_action('init', 'eva_v1_register_locale');
+
 /** Original Code:
  * https://wordpress.stackexchange.com/questions/188332/override-default-wordpress-core-translation
  */
@@ -203,9 +232,3 @@ if (! function_exists('eva_v1_get_korean_date')) {
         return $year . '년 ' . $month . '월 ' . $day . '일';
     }
 }
-
-function custom_songs_rewrite_rules()
-{
-    add_rewrite_rule('^ko/songs/([0-9]+)/?$', 'index.php?song=$matches[1]', 'top');
-}
-add_action('init', 'custom_songs_rewrite_rules', 1);

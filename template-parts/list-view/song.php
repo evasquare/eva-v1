@@ -1,4 +1,8 @@
-<?php $user_locale = get_user_locale(); ?>
+<?php
+global $eva_v1_locale;
+$user_locale = get_user_locale();
+$using_locale = $eva_v1_locale[$user_locale];
+?>
 
 <div class="song-article-wrapper">
     <article>
@@ -12,8 +16,14 @@
                     <h2 class="list-article-title"><?php the_title(); ?></h2>
                 <?php endif; ?>
             </a>
-        <?php elseif ($user_locale == "ko_KR"): ?>
-            <a class="no-decoration" href="<?php echo str_replace(site_url('/songs'), site_url('/ko/songs'), get_the_permalink()); ?>">
+        <?php else: ?>
+            <a class="no-decoration" href="
+            <?php echo str_replace(
+                site_url('/songs'),
+                site_url($using_locale['songs']['/songs']),
+                get_the_permalink()
+            ); ?>
+            ">
                 <?php if (strtotime(get_the_title())): ?>
                     <h2 class="list-article-title">
                         <?php echo eva_v1_get_korean_date(); ?>

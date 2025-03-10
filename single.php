@@ -1,3 +1,9 @@
+<?php
+global $eva_v1_locale;
+$user_locale = get_user_locale();
+$using_locale = $eva_v1_locale[$user_locale];
+?>
+
 <?php get_header(); ?>
 
 <div class="center">
@@ -5,7 +11,7 @@
         <?php while (have_posts()): ?>
             <?php the_post(); ?>
             <?php get_template_part('template-parts/content/content'); ?>
-            <h1 class="comment-title">Comments</h1>
+            <h1 class="comment-title"><?php echo $using_locale['single']['Comments']; ?></h1>
 
             <?php get_template_part('template-parts/comments'); ?>
         <?php endwhile ?>

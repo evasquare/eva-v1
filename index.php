@@ -13,7 +13,7 @@
                 ?>
             </div>
         <?php else : ?>
-            <p class="not-found">No post found! :(</p>
+            <p class="not-found"><?php echo $using_locale['index']['No post found! :(']; ?></p>
         <?php endif; ?>
         <?php eva_v1_numeric_post_navigation($wp_query) ?>
 

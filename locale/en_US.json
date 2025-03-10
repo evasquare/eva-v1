@@ -1,0 +1,35 @@
+{
+    "navBar": {
+        "/": "/",
+        "Eva Logo": "Eva Logo",
+        "Github": "Github",
+        "Email": "Email",
+        "Songs": "Songs",
+        "langSwitch": "한국어로 전환",
+        "About Me": "About Me",
+        "/images/korean-white.svg": "/images/korean-white.svg",
+        "/images/korean-black.svg": "/images/korean-black.svg",
+        "/songs": "/songs",
+        "/about-me": "/about-me",
+        "langSwitchUrl": "/ko",
+        "Hamburger Toggle": "Hamburger Toggle"
+    },
+    "songs": {
+        "/songs": "/songs"
+    },
+    "content": {
+        "Category": "Category"
+    },
+    "404": {
+        "Not found :(": "Not found :("
+    },
+    "archive": {
+        "No post found! :": "No post found! :"
+    },
+    "index": {
+        "No post found! :": "No post found! :"
+    },
+    "single": {
+        "Comments": "Comments"
+    }
+}

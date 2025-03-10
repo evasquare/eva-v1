@@ -1,3 +1,9 @@
+<?php
+global $eva_v1_locale;
+$user_locale = get_user_locale();
+$using_locale = $eva_v1_locale[$user_locale];
+?>
+
 <div class="content">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <?php if (has_post_thumbnail()): ?>
@@ -12,11 +18,12 @@
 
         <?php if (is_single()): ?>
             <div class="post-info">
-                <?php $user_locale = get_user_locale(); ?>
                 <?php if ($user_locale == "en_US"): ?>
                     <?php echo get_the_date('F j, Y'); ?> / Category: <?php the_category(", "); ?>
                 <?php elseif ($user_locale == "ko_KR"): ?>
                     <?php echo eva_v1_get_korean_date(); ?> / 카테고리: <?php the_category(", "); ?>
+                <?php else: ?>
+                    <?php echo get_the_date('F j, Y'); ?> / <?php echo $using_locale['content']['Category']; ?>: <?php the_category(", "); ?>
                 <?php endif; ?>
             </div>
         <?php endif; ?>

@@ -1,3 +1,5 @@
+<?php $user_locale = get_user_locale(); ?>
+
 <div class="post-article-wrapper">
     <article>
         <a class="no-decoration" href="<?php the_permalink(); ?>">
@@ -14,7 +16,6 @@
             </h2>
         </a>
         <p class="article-date">
-            <?php $user_locale = get_user_locale(); ?>
             <?php if ($user_locale == "en_US"): ?>
                 <?php echo get_the_date('F j, Y'); ?>
             <?php endif; ?>
