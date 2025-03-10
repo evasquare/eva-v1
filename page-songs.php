@@ -2,6 +2,7 @@
 <?php
 $song_query = new WP_Query(array(
     'post_type' => 'song',
+    'paged' => get_query_var('paged') ?: 1,
 ));
 ?>
 <div class="center">
