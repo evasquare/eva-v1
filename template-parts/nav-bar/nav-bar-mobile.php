@@ -105,22 +105,6 @@
 
                     <h2 class="menu-item__name">이메일</h2>
                 </a>
-                <a class="menu-list__menu-item menu-list__hover no-decoration" href="<?php echo esc_url(site_url('/songs')) ?>">
-                    <div class="icon-height white-icon">
-                        <img
-                            class="icon-height"
-                            src="<?php echo get_theme_file_uri(); ?>/images/song-white.svg"
-                            alt="Songs" />
-                    </div>
-                    <div class="icon-height black-icon">
-                        <img
-                            class="icon-height"
-                            src="<?php echo get_theme_file_uri(); ?>/images/song-black.svg"
-                            alt="Songs" />
-                    </div>
-
-                    <h2 class="menu-item__name">음악</h2>
-                </a>
                 <a class="menu-list__menu-item no-decoration menu-list__hover" href="<?php echo site_url('/') ?>">
                     <div class="white-icon">
                         <img

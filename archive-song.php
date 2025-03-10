@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php global $wp_query; ?>
 
 <div class="center">
     <div class="archive-song-wrapper">
@@ -22,7 +23,7 @@
         <?php else : ?>
             <p>No post found! :(</p>
         <?php endif; ?>
-        <?php eva_v1_numeric_post_navigation($paged) ?>
+        <?php eva_v1_numeric_post_navigation($wp_query) ?>
     </div>
 </div>
 

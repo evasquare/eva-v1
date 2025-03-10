@@ -37,24 +37,22 @@
                         src="<?php echo get_theme_file_uri(); ?>/images/email-black.svg"
                         alt="Send Email" />
                 </a>
-                <div>
-                    <?php if ($user_locale == "en_US"): ?>
-                        <a href="<?php echo esc_url(site_url('/songs')) ?>">
-                            <img
-                                class="icon hover-transition"
-                                src="<?php echo get_theme_file_uri(); ?>/images/song-black.svg"
-                                alt="Songs" />
-                        </a>
-                    <?php endif; ?>
-                    <?php if ($user_locale == "ko_KR"): ?>
-                        <a href="<?php echo esc_url(site_url('/ko/songs')) ?>">
-                            <img
-                                class="icon hover-transition"
-                                src="<?php echo get_theme_file_uri(); ?>/images/song-black.svg"
-                                alt="음악" />
-                        </a>
-                    <?php endif; ?>
-                </div>
+                <?php if ($user_locale == "en_US"): ?>
+                    <a href="<?php echo esc_url(site_url('/songs')) ?>">
+                        <img
+                            class="icon hover-transition"
+                            src="<?php echo get_theme_file_uri(); ?>/images/song-black.svg"
+                            alt="Songs" />
+                    </a>
+                <?php endif; ?>
+                <?php if ($user_locale == "ko_KR"): ?>
+                    <a href="<?php echo esc_url(site_url('/ko/songs')) ?>">
+                        <img
+                            class="icon hover-transition"
+                            src="<?php echo get_theme_file_uri(); ?>/images/song-black.svg"
+                            alt="Songs" />
+                    </a>
+                <?php endif; ?>
                 <div class="language-switch">
                     <?php if ($user_locale == "en_US"): ?>
                         <a href="<?php echo esc_url(site_url('/ko')) ?>">
@@ -87,24 +85,22 @@
                         src="<?php echo get_theme_file_uri(); ?>/images/email-white.svg"
                         alt="Send Email" />
                 </a>
-                <div>
-                    <?php if ($user_locale == "en_US"): ?>
-                        <a href="<?php echo esc_url(site_url('/songs')) ?>">
-                            <img
-                                class="icon hover-transition"
-                                src="<?php echo get_theme_file_uri(); ?>/images/song-white.svg"
-                                alt="Songs" />
-                        </a>
-                    <?php endif; ?>
-                    <?php if ($user_locale == "ko_KR"): ?>
-                        <a href="<?php echo esc_url(site_url('/ko/songs')) ?>">
-                            <img
-                                class="icon hover-transition"
-                                src="<?php echo get_theme_file_uri(); ?>/images/song-white.svg"
-                                alt="음악" />
-                        </a>
-                    <?php endif; ?>
-                </div>
+                <?php if ($user_locale == "en_US"): ?>
+                    <a href="<?php echo esc_url(site_url('/songs')) ?>">
+                        <img
+                            class="icon hover-transition"
+                            src="<?php echo get_theme_file_uri(); ?>/images/song-white.svg"
+                            alt="Songs" />
+                    </a>
+                <?php endif; ?>
+                <?php if ($user_locale == "ko_KR"): ?>
+                    <a href="<?php echo esc_url(site_url('/ko/songs')) ?>">
+                        <img
+                            class="icon hover-transition"
+                            src="<?php echo get_theme_file_uri(); ?>/images/song-white.svg"
+                            alt="Songs" />
+                    </a>
+                <?php endif; ?>
                 <div class="language-switch">
                     <?php if ($user_locale == "en_US"): ?>
                         <a href="<?php echo esc_url(site_url('/ko')) ?>">

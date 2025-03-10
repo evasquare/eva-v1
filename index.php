@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php global $wp_query; ?>
 
 <div class="center">
     <div class="index-wrapper">
@@ -14,7 +15,7 @@
         <?php else : ?>
             <p class="not-found">No post found! :(</p>
         <?php endif; ?>
-        <?php eva_v1_numeric_post_navigation($paged) ?>
+        <?php eva_v1_numeric_post_navigation($wp_query) ?>
 
         <?php get_template_part('template-parts/category'); ?>
     </div>

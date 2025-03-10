@@ -15,8 +15,7 @@
                 <?php $user_locale = get_user_locale(); ?>
                 <?php if ($user_locale == "en_US"): ?>
                     <?php echo get_the_date('F j, Y'); ?> / Category: <?php the_category(", "); ?>
-                <?php endif; ?>
-                <?php if ($user_locale == "ko_KR"): ?>
+                <?php elseif ($user_locale == "ko_KR"): ?>
                     <?php echo eva_v1_get_korean_date(); ?> / 카테고리: <?php the_category(", "); ?>
                 <?php endif; ?>
             </div>

@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php global $wp_query; ?>
 
 <div class="center">
     <div class="archive-wrapper">
@@ -23,7 +24,7 @@
                 <p>No post found! :(</p>
             <?php endif; ?>
         </div>
-        <?php eva_v1_numeric_post_navigation($paged) ?>
+        <?php eva_v1_numeric_post_navigation($wp_query) ?>
 
         <?php get_template_part('template-parts/category'); ?>
     </div>

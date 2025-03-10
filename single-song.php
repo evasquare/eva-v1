@@ -1,3 +1,5 @@
+<link rel="canonical" href="<?php echo get_permalink(); ?>">
+
 <style>
     h2:not(:first-child),
     h3:not(:first-child),

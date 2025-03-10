@@ -1,4 +1,6 @@
 <?php
+
+
 require get_theme_file_path('/inc/routes.php');
 
 function eva_v1_supports()
@@ -33,19 +35,27 @@ if (! function_exists('eva_v1_numeric_post_navigation')) {
     /** Original Code:
      * https://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
      * */
-    function eva_v1_numeric_post_navigation($custom_query)
+    function eva_v1_numeric_post_navigation(WP_Query $custom_query)
     {
-        if (is_singular()) {
+        $user_locale = get_user_locale();
+
+        if (($user_locale == "en_US")) {
+            $previous_page_label = "« Previous Page";
+            $next_page_label = "Next Page »";
+        } else {
+            $previous_page_label = "« 이전 페이지";
+            $next_page_label = "다음 페이지 »";
+        }
+
+        if ($custom_query->is_singular()) {
             return;
         }
 
-        global $wp_query;
-
         // Stop execution if there's only 1 page
-        if ($wp_query->max_num_pages <= 1) return;
+        if ($custom_query->max_num_pages <= 1) return;
 
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-        $max_num_page = intval($wp_query->max_num_pages);
+        $max_num_page = intval($custom_query->max_num_pages);
 
         // Add current page to the array
         if ($paged >= 1) {
@@ -67,8 +77,8 @@ if (! function_exists('eva_v1_numeric_post_navigation')) {
         $output .= '<div class="page-navigation-sections">' . "\n";
 
         // Previous Post Link
-        if (get_previous_posts_link()) {
-            $output .= sprintf('<div class="page-navigation-section flex-start">%s</div>' . "\n", get_previous_posts_link());
+        if ($paged > 1) {
+            $output .= sprintf('<div class="page-navigation-section flex-start">%s</div>' . "\n", get_previous_posts_link($previous_page_label));
         }
 
         // Start page navigation section
@@ -113,9 +123,9 @@ if (! function_exists('eva_v1_numeric_post_navigation')) {
         $output .= '</div>';
 
         // Next Post Link
-        if (get_next_posts_link())
-            $output .= sprintf('<div class="page-navigation-section">%s</div>' . "\n", get_next_posts_link());
-
+        if ($paged < $max_num_page) {
+            $output .= sprintf('<div class="page-navigation-section">%s</div>' . "\n", get_next_posts_link($next_page_label, $max_num_page));
+        }
         $output .= '</div>' . "\n";
 
         wp_reset_postdata();
@@ -193,3 +203,9 @@ if (! function_exists('eva_v1_get_korean_date')) {
         return $year . '년 ' . $month . '월 ' . $day . '일';
     }
 }
+
+function custom_songs_rewrite_rules()
+{
+    add_rewrite_rule('^ko/songs/([0-9]+)/?$', 'index.php?song=$matches[1]', 'top');
+}
+add_action('init', 'custom_songs_rewrite_rules', 1);
