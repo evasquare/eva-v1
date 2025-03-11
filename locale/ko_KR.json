@@ -31,5 +31,8 @@
     },
     "single": {
         "Comments": "댓글"
+    },
+    "category": {
+        "Categories": "카테고리"
     }
 }

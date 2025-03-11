@@ -31,5 +31,8 @@
     },
     "single": {
         "Comments": "Comments"
+    },
+    "category": {
+        "Categories": "Categories"
     }
 }

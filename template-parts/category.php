@@ -1,5 +1,11 @@
+<?php
+global $eva_v1_locale;
+$user_locale = get_user_locale();
+$using_locale = $eva_v1_locale[$user_locale];
+?>
+
 <div class="category-wrapper">
-    <h3>Categories</h3>
+    <h3><?php echo $using_locale['category']['Categories']; ?></h3>
 
     <ul>
         <?php
