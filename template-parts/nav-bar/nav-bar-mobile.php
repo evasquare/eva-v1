@@ -60,7 +60,7 @@ $using_locale = $eva_v1_locale[$user_locale];
                     <img
                         class="icon-height icon-height"
                         src="<?php echo get_theme_file_uri(); ?><?php echo $using_locale['navBar']['/images/korean-white.svg'] ?>"
-                        alt="<?php echo $using_locale['navBar']['langSwitch'] ?>"" />
+                        alt="<?php echo $using_locale['navBar']['langSwitch'] ?>" />
                 </div>
                 <div class=" icon-height black-icon">
                     <img
@@ -83,7 +83,7 @@ $using_locale = $eva_v1_locale[$user_locale];
                 <img
                     class="hover-transition"
                     src="<?php echo get_theme_file_uri(); ?>/images/logo.png"
-                    alt="<?php echo esc_url(site_url($using_locale['navBar']['Eva Logo'])) ?>" />
+                    alt="<?php echo $using_locale['navBar']['Eva Logo'] ?>" />
             </a>
         </div>
 
@@ -92,11 +92,11 @@ $using_locale = $eva_v1_locale[$user_locale];
                 <img
                     class="top-icon white-icon hover-transition"
                     src="<?php echo get_theme_file_uri(); ?>/images/hamburger-white.svg"
-                    alt="<?php echo esc_url(site_url($using_locale['navBar']['Hamburger Toggle'])) ?>" />
+                    alt="<?php echo $using_locale['navBar']['Hamburger Toggle'] ?>" />
                 <img
                     class="top-icon black-icon hover-transition"
                     src="<?php echo get_theme_file_uri(); ?>/images/hamburger-black.svg"
-                    alt="<?php echo esc_url(site_url($using_locale['navBar']['Hamburger Toggle'])) ?>" />
+                    alt="<?php echo $using_locale['navBar']['Hamburger Toggle'] ?>" />
             </button>
         </div>
     </div>
